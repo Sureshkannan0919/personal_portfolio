@@ -6,7 +6,7 @@ import React, { useContext, useRef, useState } from 'react';
 import { AiOutlineCheckCircle, AiOutlineSend } from 'react-icons/ai';
 import {
     FaFacebook, FaGithub, FaLinkedinIn, FaMediumM,
-    FaStackOverflow, FaTwitter
+    FaStackOverflow, FaTwitter,FaInstagram
 } from 'react-icons/fa';
 import { FiAtSign, FiPhone } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -73,7 +73,7 @@ function Contacts() {
                 <h1 style={{ color: theme.primary }}>Contacts</h1>
                 <div className={styles.contactsBody}>
                     <div className={styles.contactsForm}>
-                        <form ref={form} onSubmit={handleContactForm}>
+                    <form ref={form} onSubmit={handleContactForm}>
                             <div className={styles.inputContainer}>
                                 <label htmlFor='Name'
                                     className="bg-[#15202B] text-[#EFF3F4] 
@@ -253,20 +253,7 @@ function Contacts() {
                         </div>
 
                         <div className={styles.socialmediaIcons}>
-                            {socialsData.twitter && (
-                                <a
-                                    href={socialsData.twitter}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className="w-[45px] h-[45px] 
-                                    rounded-[50%] flex items-center 
-                                    justify-center text-xl transition
-                                     ease-in-out text-[#15202B] bg-[#8B98A5]
-                                      hover:bg-[#1D9BF0]"
-                                >
-                                    <FaTwitter aria-label='Twitter' />
-                                </a>
-                            )}
+
                             {socialsData.github && (
                                 <a
                                     href={socialsData.github}
@@ -305,35 +292,6 @@ function Contacts() {
                                     hover:bg-[#1D9BF0]"
                                 >
                                     <FaMediumM aria-label='Medium' />
-                                </a>
-                            )}
-
-
-
-                            {socialsData.stackOverflow && (
-                                <a
-                                    href={socialsData.stackOverflow}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className="w-[45px] h-[45px] rounded-[50%] flex 
-                                    items-center justify-center text-xl transition 
-                                    ease-in-out text-[#15202B] bg-[#8B98A5] 
-                                    hover:bg-[#1D9BF0]"
-                                >
-                                    <FaStackOverflow aria-label='Stack Overflow' />
-                                </a>
-                            )}
-                            {socialsData.facebook && (
-                                <a
-                                    href={socialsData.facebook}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className="w-[45px] h-[45px] rounded-[50%] flex
-                                     items-center justify-center text-xl transition
-                                      ease-in-out text-[#15202B] bg-[#8B98A5]
-                                       hover:bg-[#1D9BF0]"
-                                >
-                                    <FaFacebook aria-label='facebook' />
                                 </a>
                             )}
                         </div>
